@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>プログラミング研修 時間割</title>
+    <script src="assets/js/util.js"></script>
+    <style>
+        .cd-schedule__event [data-event="event-5"] {
+            background: #f4aeb9;
+        }
+        .cd-schedule__event [data-event="event-b"] {
+            background: rgba(14, 21, 73, 0.38);
+        }
+        .cd-schedule__event [data-event="event-6"] {
+            background: #9a6f78;
+        }
+        .cd-schedule__event [data-event="event-7"] {
+            background: #5a9a5e;
+        }
+        .cd-schedule__event [data-event="event-8"] {
+            background: #63879a;
+        }
+        .cd-schedule__event [data-event="event-9"] {
+            background: #9a5a67;
+        }
+        header {
+            margin-top: 50px;
+        }
+        body {
+            background-image: linear-gradient(
+                    -45deg,
+                    #e9ecf5 25%,
+                    #e1e6f4 25%,
+                    #e1e6f4 50%,
+                    #e9ecf5 50%,
+                    #e9ecf5 75%,
+                    #e1e6f4 75%,
+                    #e1e6f4
+            );
+            background-size: 40px 40px;
+            background-attachment: fixed;
+        }
+        .cd-schedule__top-info {
+            background: #FFFFFF;
+        }
+        .cd-schedule__top-info{
+            background: repeating-linear-gradient(to right, #fef9fe, #fef9fe 3px, white 3px, white 6px);
+        }
+    </style>
+</head>
+<body>
+<header class="cd-main-header text-center flex flex-column flex-center">
+    <h1 class="text-xl">プログラミング研修 時間割</h1>
+</header>
+
+<div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+    <div class="cd-schedule__timeline">
+        <ul>
+            <li><span>00:00</span></li>
+            <li><span>00:15</span></li>
+            <li><span>00:30</span></li>
+            <li><span>00:45</span></li>
+            <li><span>01:00</span></li>
+            <li><span>01:15</span></li>
+            <li><span>01:30</span></li>
+            <li><span>01:45</span></li>
+            <li><span>02:00</span></li>
+            <li><span>02:15</span></li>
+            <li><span>02:30</span></li>
+            <li><span>02:45</span></li>
+            <li><span>03:00</span></li>
+            <li><span>03:15</span></li>
+            <li><span>03:30</span></li>
+            <li><span>03:45</span></li>
+            <li><span>04:00</span></li>
+            <li><span>04:15</span></li>
+            <li><span>04:30</span></li>
+            <li><span>04:45</span></li>
+            <li><span>05:00</span></li>
+            <li><span>05:15</span></li>
+            <li><span>05:30</span></li>
+            <li><span>05:45</span></li>
+            <li><span>06:00</span></li>
+            <li><span>06:15</span></li>
+            <li><span>06:30</span></li>
+            <li><span>06:45</span></li>
+            <li><span>07:00</span></li>
+        </ul>
+    </div> <!-- .cd-schedule__timeline -->
+
+    <div class="cd-schedule__events">
+        <ul>
+            <li class="cd-schedule__group">
+                <div class="cd-schedule__top-info"><span>1日目</span></div>
+
+                <ul>
+                    <li class="cd-schedule__event">
+                        <a data-start="00:00" data-end="00:30" data-event="event-1" href="#0">
+                            <em class="cd-schedule__name">Slack と Zoom の活用</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="00:30" data-end="01:00" data-event="event-2" href="#0">
+                            <em class="cd-schedule__name">オリエンテーション</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="01:00" data-end="02:00" data-event="event-3" href="#0">
+                            <em class="cd-schedule__name">Google Workspace<br>
+                                ・7つのアプリ紹介</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="02:00" data-end="03:00" data-event="event-4" href="#0">
+                            <em class="cd-schedule__name">Google Sheets①<br>
+                                ・GAS を使ってみる</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                            <em class="cd-schedule__name">休憩</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="04:00" data-end="07:00" data-event="event-6" href="#0">
+                            <em class="cd-schedule__name">Google Sheets②<br>
+                                ・データの取得<br>
+                                ・メール送信<br>
+                                ・一斉メール送信</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cd-schedule__group">
+                <div class="cd-schedule__top-info"><span>2日目</span></div>
+
+                <ul>
+                    <li class="cd-schedule__event">
+                        <a data-start="00:00" data-end="00:30" data-event="event-7" href="#0">
+                            <em class="cd-schedule__name">復習</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="00:30" data-end="03:00" data-event="event-6" href="#0">
+                            <em class="cd-schedule__name">Google Sheets③<br>
+                                ・メール送信完了処理<br>
+                                ・様々なメール送信
+                            </em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                            <em class="cd-schedule__name">休憩</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="04:00" data-end="07:00" data-event="event-4" href="#0">
+                            <em class="cd-schedule__name">Google Sheets④<br>
+                                ・Web スクレイピング<br>
+                                ・集計<br>
+                                ・グラフ作成<br>
+                            </em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cd-schedule__group">
+                <div class="cd-schedule__top-info"><span>3日目</span></div>
+
+                <ul>
+                    <li class="cd-schedule__event">
+                        <a data-start="00:00" data-end="00:30" data-event="event-7" href="#0">
+                            <em class="cd-schedule__name">復習</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="00:30" data-end="03:00" data-event="event-2" href="#0">
+                            <em class="cd-schedule__name">Google Form①<br>
+                                ・使ってみる<br>
+                                ・Slack に通知<br>
+                                ・回答者に自動メール送信<br>
+                            </em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                            <em class="cd-schedule__name">休憩</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="04:00" data-end="07:00" data-event="event-5" href="#0">
+                            <em class="cd-schedule__name">Google Form②<br>
+                                ・自動受付終了<br>
+                                ・回答取得<br>
+                                ・集計<br>
+                            </em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cd-schedule__group">
+                <div class="cd-schedule__top-info"><span>4日目</span></div>
+
+                <ul>
+                    <li class="cd-schedule__event">
+                        <a data-start="00:00" data-end="00:30" data-event="event-7" href="#0">
+                            <em class="cd-schedule__name">復習</em>
+                        </a>
+                    </li>
+
+                    <li class="cd-schedule__event">
+                        <a data-start="00:30" data-end="03:00" data-event="event-4" href="#0">
+                            <em class="cd-schedule__name">Google カレンダー①<br>
+                                ・使ってみる<br>
+                                ・予定の取得と作成<br>
+                            </em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                            <em class="cd-schedule__name">休憩</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="04:00" data-end="06:30" data-event="event-1" href="#0">
+                            <em class="cd-schedule__name">Google カレンダー②<br>
+                                ・LINE 連携
+                            </em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="06:30" data-end="07:00" data-event="event-3" href="#0">
+                            <em class="cd-schedule__name">明日の企画</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cd-schedule__group">
+                <div class="cd-schedule__top-info"><span>5日目</span></div>
+
+                <ul>
+                    <li class="cd-schedule__event">
+                        <a data-start="00:00" data-end="03:00" data-event="event-9" href="#0">
+                            <em class="cd-schedule__name">GASの作品作り</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                            <em class="cd-schedule__name">休憩</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="04:00" data-end="06:00" data-event="event-9" href="#0">
+                            <em class="cd-schedule__name">GASの作品作り</em>
+                        </a>
+                    </li>
+                    <li class="cd-schedule__event">
+                        <a data-start="06:00" data-end="07:00" data-event="event-4" href="#0">
+                            <em class="cd-schedule__name">成果物発表会</em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="cd-schedule-modal">
+        <header class="cd-schedule-modal__header">
+            <div class="cd-schedule-modal__content">
+                <span class="cd-schedule-modal__date"></span>
+                <h3 class="cd-schedule-modal__name"></h3>
+            </div>
+
+            <div class="cd-schedule-modal__header-bg"></div>
+        </header>
+
+        <div class="cd-schedule-modal__body">
+            <div class="cd-schedule-modal__event-info"></div>
+            <div class="cd-schedule-modal__body-bg"></div>
+        </div>
+
+        <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+    </div>
+
+    <div class="cd-schedule__cover-layer"></div>
+</div>
+
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!--
+
+// License: https://codyhouse.co/mit
+
+//-->
