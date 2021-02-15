@@ -1,3 +1,3 @@
 # n-training-schedule
 
-N Code Camp(仮)の時間割です
+N Code Trainingの時間割です
