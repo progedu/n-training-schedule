@@ -1,0 +1,15 @@
+/**
+* This Web site use nnn Code Font, or modified version of Source Code Pro.
+* nnn Code Font is licensed under the SIL Open Font License, Version 1.1.
+* Original version: https://github.com/adobe-fonts/source-code-pro
+**/
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Source Code Pro Regular"), local("SourceCodePro-Regular"),
+    url(../fonts/nnn-code-font.woff2) format('woff2'),
+    url(../fonts/nnn-code-font.woff) format('woff'),
+    url(../fonts/nnn-code-font.ttf) format('truetype');
+}

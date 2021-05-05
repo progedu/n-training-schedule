@@ -1,0 +1,483 @@
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--<base target="_parent">-->
+  <base href="." target="_parent">
+  <title>VS Codeのインストール</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./vscode_files/font.css">
+  <link rel="stylesheet" href="./vscode_files/default.css">
+  <link rel="stylesheet" href="./vscode_files/normalize.css">
+  <link rel="stylesheet" href="./vscode_files/style.css">
+  <link rel="stylesheet" href="./vscode_files/codeBlockDecorator.css">
+  <script type="text/javascript" async="" src="./vscode_files/f.txt"></script><script async="" src="./vscode_files/uwt.js"></script><script type="text/javascript" async="" src="./vscode_files/analytics.js"></script><script async="" src="./vscode_files/gtm.js"></script><script type="text/javascript" src="./vscode_files/gifffer.min.js"></script>
+  <script type="text/javascript" src="./vscode_files/codeBlockDecorator.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="./vscode_files/MathJax.js"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#0075c2',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    };
+
+  </script>
+  <script defer="" src="./vscode_files/MathJax.js"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#0075c2',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5NW2C5Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NW2C5Z');</script>
+<!-- End Google Tag Manager -->
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" src="./vscode_files/f(1).txt"></script><script charset="utf-8" src="./vscode_files/button.63c51c903061d0dbd843c41e8a00aa5a.js"></script><script src="./vscode_files/f(2).txt"></script></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>VS Codeのインストール</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1>VS Codeのインストール</h1>
+        <h2>VS Codeをインストールしよう</h2>
+        <p>Visual Studio Code、略して <strong>VS Code</strong> （ブイエス・コード） と呼びます。 これは、プログラムを書くための <strong>エディタ</strong> と呼ばれるソフトウェアです。<br> Windows の標準機能にある「メモ帳」もエディタの一種ですが、メモ帳と比べて VS Code はプログラミングに便利な機能がたくさん備わっています。<br> 「コード (Code)」は、プログラムを動かすための命令をする文章のことです。<strong>ソースコード</strong>ともいいます。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/9915c46b-private.png">
+          <span class="imagecaption screenshot">VS Codeのイメージ</span>
+        </div>
+        <div class="tip"><a name="vs-and-xcode"></a>
+          <span class="tip-title">似た名前のソフトウェア</span>
+          <p>「Visual Studio Code（VS Code）」と似た名前のソフトウェアがいくつかありますが、それぞれ用途が違います。</p>
+          <p>「Code」がつかない Visual Studio（ビジュアルスタジオ、略して VS）は、主に Windows 向けのアプリを開発する場合に使用することが多いソフトウェアです。 VS Code と VS は、どちらも Microsoft 社が開発しています。</p>
+          <p>Xcode（エックスコード）は、主に Mac や iPhone、iPad 向けのアプリを開発する際に使用する Apple 社製のソフトウェアです。</p>
+        </div>
+        <h3>VS Code をインストールしてみよう。</h3>
+        <p><a name="instal-vscode"></a></p>
+        <p><a href="https://www.nnn.ed.nico/contents/guides/4003#what-is-browser">ブラウザ</a> から VS Code の公式サイト <strong><a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></strong> にアクセスしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab(&#39;win&#39;)" data-tablink-name="win">Windows</div>
+            <div class="tablink" onclick="selectTab(&#39;mac&#39;)" data-tablink-name="mac">Mac</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>ダウンロードボタン（Download for Windows）をクリックします。すると、ページが切り替わった後にダウンロードが開始されます。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/c5108e15-private.png">
+                <span class="imagecaption screenshot">インストーラーのダウンロードボタン</span>
+              </div>
+              <p>ダウンロードが完了すると、 Google Chrome の画面下部にファイルが表示されます。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/2270892e-private.png">
+                <span class="imagecaption screenshot">ダウンロードが完了した</span>
+              </div>
+              <p>VS Code のインストールに使うファイル自体は、 Google Chrome をダウンロードした時のようにダウンロードフォルダに保存されていますが、Chrome からもアクセスできます。<br> ファイル名をクリックしましょう。</p>
+              <p>インストーラーの起動時に「セキュリティの警告」のウィンドウが表示されたら、「実行」ボタンを押してください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/a0f681be-private.png">
+                <span class="imagecaption screenshot">「セキュリティの警告」のウィンドウが表示されたら、「実行」ボタンを押す。</span>
+              </div>
+              <p>インストーラーに従ってインストールをしましょう。まず最初に使用するにあたっての注意書きが表示されます。同意する場合、「同意する(A)」をクリックして「次へ(N)」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/189e624c-private.png">
+                <span class="imagecaption screenshot">使用許諾契約書に同意する</span>
+              </div>
+              <p>下の画面は、インストール先の選択画面です。そのまま 「次へ(N)」 を押してください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/d1b9b4cc-private.png">
+                <span class="imagecaption screenshot">インストール先はデフォルトのまま</span>
+              </div>
+              <p>下の画面は、スタートメニューのショートカットを作成する選択画面です。そのまま 「次へ(N)」 を押してください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/50a2d216-private.png">
+                <span class="imagecaption screenshot">スタートメニューに VS Codeの ショートカットを作成する設定</span>
+              </div>
+              <p>下の画面は、デスクトップにショートカットアイコンを作る設定とパスの設定画面です。<br> 3 箇所にチェックをつけます（既にチェックがついている場合はそのままにしてください）。</p>
+              <ul>
+                <li>デスクトップ上にアイコンを作成する(D)</li>
+                <li>サポートされているファイルの種類のエディターとして、Code を登録する</li>
+                <li>PATH への追加（再起動後に使用可能）</li>
+              </ul>
+              <p>チェックをつけたら 「次へ(N)」 を押します。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/80646d0d-private.png">
+                <span class="imagecaption screenshot">デスクトップにショートカットアイコンを作る設定とパスの設定</span>
+              </div>
+              <p>下の画面は確認画面です。確認ができたら 「インストール(I)」 を押してインストールしましょう。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/45e99a03-private.png">
+                <span class="imagecaption screenshot">確認画面</span>
+              </div>
+              <p>このような画面が表示されている間はインストール作業が行われています。そのままお待ちください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/a567b0b6-private.png">
+                <span class="imagecaption screenshot">インストール中</span>
+              </div>
+              <p>インストールが完了すると、以下のような画面になります。「Visual Studio Code を実行する」にチェックが付いている場合は外し、「完了」を押したらインストール完了です。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/b6c59beb-private.png">
+                <span class="imagecaption screenshot">インストール完了画面</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <p>ダウンロードボタン（Download for Mac）をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/9e168e25-private.png">
+                <span class="imagecaption screenshot">macOS 版のダウンロードボタン</span>
+              </div>
+              <p>ページが切り替わった後、ダウンロードが開始され、ダウンロードフォルダに zip ファイルが保存されます。 Google Chrome の画面下部にダウンロードしたファイルが表示されるので、ここから「Finder で表示」をクリックしてダウンロードフォルダを開きます。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/795e34f1-private.png">
+                <span class="imagecaption screenshot">Finder で表示 をクリック</span>
+              </div>
+              <p>ダウンロードフォルダに <code>VSCode-darwin-stable.zip</code> といった名前の ZIP ファイルがあるはずなので、これをダブルクリックして展開します。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/f30f5fa4-private.png">
+                <span class="imagecaption screenshot">ZIP ファイルを展開</span>
+              </div>
+              <p>展開すると、 <code>Visual Studio Code.app</code> という名前のファイルが表示されるので、画面左側の「アプリケーション」フォルダにドラッグ&amp;ドロップします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/af338da5-private.png">
+                <span class="imagecaption screenshot">Visual Studio Code をインストール</span>
+              </div>
+              <p>これで Mac における VS Code のインストール作業は完了です。</p>
+              <p><a href="https://www.nnn.ed.nico/contents/guides/4004/content#show-file-extension"><img src="./vscode_files/next-arrow.png" alt=""></a></p>
+            </div>
+          </div>
+        </div>
+        <h3><a name="show-file-extension"></a> ファイル拡張子を表示しよう</h3>
+        <h3>拡張子とは</h3>
+        <p>ファイルの種類を示すために、ファイル名の末尾にピリオドと共に示される文字列のことを指します。<br> たとえば、テキストファイルでは <code>.txt</code> 、 Microsoft Word ファイルならば <code>.docx</code> のことです。</p>
+        <p>Web サイトの URL には <code>.html</code> が拡張子としてつくことがあります。これも HTML ファイルを示す拡張子です。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/e75aa077-private.png">
+          <span class="imagecaption screenshot">Web サイトの URL にも拡張子は表示されている</span>
+        </div>
+        <p>Windows と Mac では、標準状態では拡張子が隠されています。 これは、ユーザがファイル名を変更するときに誤って拡張子を消してしまったり、変えてしまったりすることでトラブルが起こることを防ぐためです。<br> プログラミングをする上では拡張子を表示させておいた方が便利なので、設定を変更しておきましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab(&#39;win&#39;)" data-tablink-name="win">Windows</div>
+            <div class="tablink" onclick="selectTab(&#39;mac&#39;)" data-tablink-name="mac">Mac</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <h3>Windows 10 の場合</h3>
+              <p>まず「ドキュメント」フォルダを開いてみましょう（他のフォルダでも構いません）。<br> スタートメニューから書類のアイコンをクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/fa0f5cc1-private.png" width="700">
+                <span class="imagecaption screenshot">書類のアイコンをクリック</span>
+              </div>
+              <p>画面上部にある「表示」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/8cb3edde-private.png" width="700">
+                <span class="imagecaption screenshot">「表示」タブをクリック</span>
+              </div>
+              <p>「表示/非表示」というグループの中の「ファイル名拡張子」にチェックを入れます。これで完了です。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/c787389d-private.png" width="700">
+                <span class="imagecaption screenshot">「ファイル名拡張子」にチェックを入れる</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <p>Finder を開き、「 Finder 」メニューから「環境設定」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/e319b1ea-private.png">
+                <span class="imagecaption screenshot">「環境設定」を開く</span>
+              </div>
+              <p>「詳細」をクリックし、「すべてのファイル名拡張子を表示」にチェックを入れます。これで完了です。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/6e9c6b08-private.png">
+                <span class="imagecaption screenshot">「すべてのファイル名拡張子を表示」を開く</span>
+              </div>
+              <p><a href="https://www.nnn.ed.nico/contents/guides/4004/content#open-vscode"><img src="./vscode_files/next-arrow.png" alt=""></a></p>
+            </div>
+          </div>
+        </div>
+        <h3><a name="open-vscode"></a> VS Code を開こう</h3>
+        <p><a href="https://www.nnn.ed.nico/contents/guides/4004/content#about-vs-code">VS Code</a> を起動しましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab(&#39;win&#39;)" data-tablink-name="win">Windows</div>
+            <div class="tablink" onclick="selectTab(&#39;mac&#39;)" data-tablink-name="mac">Mac</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>手順通りにインストールした場合は、デスクトップに Visual Studio Code という名前のショートカットができているはずなので、これをダブルクリックして起動します。<br> もし、デスクトップにアイコンがない場合はスタートメニュー内から Visual Studio Code を探してみてください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/a44445c9-private.png">
+                <span class="imagecaption screenshot">デスクトップのショートカットアイコン</span>
+              </div>
+              <p>環境によっては、「Git が見つかりません」というエラーが表示されます。<br> この教材ではこのエラーは無視して構いません。 「今後は表示しない」をクリックしましょう。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/66525116-private.png">
+                <span class="imagecaption screenshot">「Git が見つかりません」というエラーに対しては「今後は表示しない」をクリック</span>
+              </div>
+              <p><a href="https://www.nnn.ed.nico/contents/guides/4004/content#localization-vscode"><img src="./vscode_files/next-arrow.png" alt=""></a></p>
+            </div>
+            <div class="tabcontent">
+              <p>Mac の場合、 Finder の「アプリケーション」フォルダをクリックし、「Visual Studio Code」をダブルクリックして起動します。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/77882c6a-private.png">
+                <span class="imagecaption screenshot">Visual Studio Code をダブルクリックして起動</span>
+              </div>
+              <p>「開いてもよろしいですか？」という警告が表示された場合、「開く」をクリックしてください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/6480ac8d-private.png">
+                <span class="imagecaption screenshot">開く をクリック</span>
+              </div>
+              <h4><a name="open-vscode-from-terminal"></a> VS Code をコマンドから起動できるようにしよう</h4>
+              <p>この Web プログラミング入門コースが本格的に進んでいくと、コマンドでコンピューターを操作する機会が増えてきます。<br> 今後の学習に備えて VS Code をコマンド（ターミナル）から起動出来るように設定しておきましょう。<br></p>
+              <p>まず「アプリケーション」フォルダの中にある <code>Visual Studio Code.app</code> をダブルクリックで起動します。</p>
+              <p>Visual Studio Code が起動したら、メニューの「View」から「Command Palette...」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/629eff20-private.png">
+                <span class="imagecaption screenshot">「Command Palette...」をクリック</span>
+              </div>
+              <p>すると、VS Code の画面上部に入力欄が現れるはずです。<br> その入力欄の中に半角で <code>PATH</code> と入力し、<code>Shell Command: Install 'code' command in PATH</code> という項目をクリックしてください。<br> 間違って <code>Uninstall</code> の方をクリックしてしまった場合は、もう一度「Command Palette...」を開くところからやり直してください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/9a7c38bb-private.png">
+                <span class="imagecaption screenshot">「Shell Command: Install 'code' command in PATH」をクリック</span>
+              </div>
+              <p>"Code will now prompt with 'osascript' for Administrator privileges to install the shell command." と表示される場合があります。 その場合は OK をクリックし、次に「osascript が変更を加えようとしています」という表示が現れたら、Mac にログインする際のパスワードを入力し「OK」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/ee7f9239-private.png">
+                <span class="imagecaption screenshot">パスワードを入力し、OKをクリック</span>
+              </div>
+              <p>VS Code の画面右下にインストール完了のメッセージが表示されたら完了です。メッセージの右側にある白い × ボタンをクリックしてください。</p>
+              <div class="image-with-caption">
+                <img src="./vscode_files/0281d8ba-private.png">
+                <span class="imagecaption screenshot">完了メッセージ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3><a name="localization-vscode"></a> VS Code を日本語化しよう</h3>
+        <p>Windows の方も Mac の方も、無事に VS Code が起動したでしょうか。</p>
+        <p>初回の起動時は VS Code 公式サイトの解説ページがブラウザで開くことがありますが、これは使用しないので閉じてかまいません。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/6687657e-private.png" width="800">
+          <span class="imagecaption screenshot">解説ページが表示されることがあるが、閉じてよい</span>
+        </div>
+        <p>現時点では VS Code の画面表示が英語になっているはずですので、公式の拡張機能をインストールして日本語化を行います。<br> まず、右下に表示されるメッセージは小さな「×」ボタンをクリックして消しましょう。<br> 続いて、画面左端にいくつかアイコンが並んでいる部分の一番下にある、四角形が 4 つ描かれたボタンをクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/7ab012cf-private.png">
+          <span class="imagecaption screenshot">初回起動時（英語表示）</span>
+        </div>
+        <p>すると、画面左側に EXTENSIONS などと書かれた領域が現れます。<br> 一番上の検索欄に半角英数字で <code>Japanese</code> と入力すると、自動で検索が行われ、名前に「Japanese」という文字を含んだ様々な拡張機能が表示されます。<br> 今からインストールするのは <strong>Microsoft</strong> 製の、 <strong>Japanese Language Pack for Visual Studio Code</strong> という名前の拡張機能です。<br> 名前と発行元が正しいことを確認したら、右側にある <strong>Install</strong> というボタンをクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/620c6bdb-private.png">
+          <span class="imagecaption screenshot">拡張機能のインストール</span>
+        </div>
+        <p>しばらく待つとインストールが自動で完了します。<br> すると、画面の右下に in order to use VS Code in Japanese, VS Code needs to restart （日本語で VS Code を使用するには VS Code を再起動する必要があります）という英語のメッセージが表示されます。<br> 日本語で利用したいので、 <strong>Restart Now</strong> ボタンをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/c3dc1b8d-private.png">
+          <span class="imagecaption screenshot">Restart Now をクリック</span>
+        </div>
+        <p>すると、自動で VS Code が再起動し、画面表示が日本語に切り替わります。<br> なお、左側にエクスプローラーと呼ばれる領域が表示されます。今は使わないので非表示にしておきましょう。<br> 左端のアイコンで、一番上のアイコンをクリックしてください。すると、「ようこそ」と書かれた領域が広がるはずです。</p>
+        <div class="image-with-caption">
+          <img src="./vscode_files/e6354585-private.png">
+          <span class="imagecaption screenshot">日本語になって起動した</span>
+        </div>
+        <p>これ以降、この教材では日本語版に合わせて解説を行っていきます。</p>
+        <div class="tip"><a name="mac-dock"></a>
+          <span class="tip-title">Mac では Dock に追加しておこう</span>
+          <p>Windows ではデスクトップにショートカットが作成されていましたが、Mac の場合も Dock に追加しておくと、 VS Code の起動が便利になります。</p>
+          <p class="image-with-caption">
+            <img src="./vscode_files/a93fe2fe-private.png">
+            <span class="imagecaption screenshot">Dock に追加</span>
+          </p>
+        </div>
+        <h2 class="ending-h2">お疲れさまでした！</h2>
+        <p>以上でVS Codeのインストールは完了です</p>
+      </section>
+    </div>
+  </div>
+  <script>
+    codeBlockDecorator();
+
+  </script>
+<script src="./vscode_files/guideContentMathJaxChannel-1dae68c8361e87b2f08f.js"></script>
+
+
+
+
+
+<script type="text/javascript" id="" src="./vscode_files/js"></script><script type="text/javascript" id="" src="./vscode_files/ytag.js"></script>
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o2upm");twq("track","PageView");</script>
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./vscode_files/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html" title="Twitter settings iframe" style="display: none;"></iframe>
+<script type="text/javascript" id="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","AW-661450372");</script>
+<script type="text/javascript" id="">window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"ycl_cookie"});ytag({type:"ycl_cookie_extended"});</script><script type="text/javascript" id="" src="./vscode_files/ytag.js"></script>
+<script type="text/javascript" id="">window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yss_retargeting",config:{yahoo_ss_retargeting_id:"1001119071",yahoo_sstag_custom_params:{}}});</script><script src="./vscode_files/adsct" type="text/javascript"></script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./vscode_files/saved_resource.html"></iframe></body></html>

@@ -1,0 +1,87 @@
+/* コードブロックに行番号を追加 */
+
+.code-decorate pre{
+  position: relative;
+}
+
+.code-decorate pre code {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+.code-decorate pre code.with-lnum{
+  padding-left: 3.5em;
+}
+.code-decorate pre code.multi-numbers.with-lnum{
+  padding-left: 6.5em;
+}
+
+.code-decorate pre code.with-fname{
+  margin-top: 2em;
+}
+
+.line-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  padding: 20px .25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-right: 1px solid #ccc;
+}
+
+code.multi-numbers .line-numbers{
+  width: 6em;
+}
+
+.line-numbers > span {
+  float: left;
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+.line-numbers > span.left {
+  padding-right: 50%;
+}
+.line-numbers span::before{
+  color: #333;
+  content: attr(data-num);
+}
+
+.line-numbers .deleted-number {
+  position: absolute;
+  right: 50%;
+  text-align: right;
+}
+
+pre .name-tag{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+  background: #004775;
+  color: #f5fbff;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 1.1em !important;
+  text-shadow: none;
+}
+
+.token.deleted,
+.token.prefix.unchanged,
+.token.prefix.inserted {
+  /* diff 中でコピー対象を指定 */
+  user-select: none;
+}
+.token.deleted-sign.deleted {
+  background-color: rgba(255, 0, 0, 0.1);
+  display: block;
+}
+.token.inserted-sign.inserted {
+  background-color: rgba(0, 255, 128, 0.1);
+  display: block;
+}

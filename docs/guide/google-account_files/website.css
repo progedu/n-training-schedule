@@ -1,0 +1,1256 @@
+body {
+  text-rendering: auto;
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.book .book-header {
+  height: 0px;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  color: #1a1a1a;
+  max-width: 100%;
+  padding: 0px;
+}
+
+.book .book-body .page-wrapper .page-inner section {
+  padding: 0px;
+  margin-bottom: 100px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .imagecaption {
+  background: #f2f2f2;
+  font-size: 80%;
+  padding: 3px;
+  margin: 0px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .photo:before {
+  content: "\5199\771f\ff1a";
+  /* 写真： */
+}
+
+/*  */
+
+.book .book-body .page-wrapper .page-inner section.normal .screenshot:before {
+  content: "\30b9\30af\30ea\30fc\30f3\30b7\30e7\30c3\30c8\ff1a";
+  /* スクリーンショット： */
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .figure:before {
+  content: "\56f3\ff1a";
+  /* 図： */
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .animation:before {
+  content: "\30a2\30cb\30e1\30fc\30b7\30e7\30f3\ff1a";
+  /* アニメーション： */
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+  margin: 22px 5%;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  margin: 0px 5%;
+  padding: 10px 6px;
+  /* [上下][左右] */
+  background: #f8f8f8;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre.folder-structure {
+    line-height: 1em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  margin: 0px 5%;
+  /* [上下][左右] */
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote p {
+  margin: 22px 1%;
+  /* [上下][左右] */
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  :not(.input-code > pre > code)
+  :not(.input-code-mac > pre > code)
+  :not(.input-code-win > pre > code)
+  :not(.input-code-ubuntu > pre > code)
+  :not(pre)
+  code:not(.language-html):not(.language-HTML):not(.language-js):not(.language-css):not(.language-sh):not(.language-diff):not(.language-jade):not(.language-json):not(.language-git):not(.language-sql):not(.language-none):not(.blue):not(.green):not(.red) {
+  line-height: 1.8;
+  background: #ebefff;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.output-code {
+  margin: 22px 5%;
+  padding: 4px;
+  background: #d0d0d0;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  pre:not(.console) {
+  margin: 0px;
+  background: #1a1a1a;
+  line-height: 1.1;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  pre.console {
+  margin: 0px;
+  background: #ffffff;
+  line-height: 1.1;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  code:not(.language-none):not(.green):not(.blue):not(.red) {
+  font-family: "Lucida Console";
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  code:not(.language-none) {
+  font-family: "Lucida Console";
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  pre.console
+  code.green {
+  color: #47bf3b;
+  font-weight: bold;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  pre.console
+  code.blue {
+  color: #5230e1;
+  font-weight: bold;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  pre.console
+  code.red {
+  color: #c23820;
+  font-weight: normal;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code
+  code.language-none {
+  font-family: "Lucida Console";
+  color: #000000;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.output-code-ide {
+  margin: 22px 5%;
+  /* [上下][左右] */
+  padding: 3px 12px;
+  /* [上下][左右] */
+  background: #e7e7e7;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code-ide
+  pre {
+  margin: 0px;
+  /* [上下][左右] */
+  padding: 2px 8px;
+  /* [上下][左右] */
+  background: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code-ide
+  code {
+  font-family: Menlo, "Lucida Console";
+  font-size: 95%;
+  color: #1a1a1a;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.output-code-ide
+  code.green-back {
+  background: #eaffea;
+  color: #5e5e5e;
+  font-weight: bold;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.input-code {
+  margin: 22px 5%;
+  padding: 6px;
+  background: #d0d0d0;
+  border-width: 5px;
+  border-color: #d0d0d0;
+  border-radius: 10px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code
+  pre {
+  margin: 0px;
+  padding: 10px;
+  background: #222222;
+  line-height: 1.2;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code
+  code {
+  font-family: Menlo, "Lucida Console", monospace;
+  color: #eeeeee;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.input-code-mac {
+  margin: 22px 5%;
+  padding: 6px;
+  background: #d0d0d0;
+  border-width: 5px;
+  border-color: #d0d0d0;
+  border-radius: 10px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-mac
+  pre {
+  margin: 0px;
+  padding: 10px;
+  background: #ffffff;
+  line-height: 0.9;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-mac
+  code {
+  font-family: Menlo, "Lucida Console", monospace;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.input-code-win {
+  margin: 22px 5%;
+  padding: 6px;
+  background: #d0d0d0;
+  border-width: 5px;
+  border-color: #d0d0d0;
+  border-radius: 10px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-win
+  pre {
+  margin: 0px;
+  padding: 10px;
+  background: #012456;
+  line-height: 0.9;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-win
+  code {
+  font-family: Menlo, "Lucida Console", monospace;
+  color: #efffff;
+  font-weight: bold;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.input-code-ubuntu {
+  margin: 22px 5%;
+  padding: 6px;
+  background: #d0d0d0;
+  border-width: 5px;
+  border-color: #d0d0d0;
+  border-radius: 10px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-ubuntu
+  pre {
+  margin: 0px;
+  padding: 10px;
+  background: #000000;
+  line-height: 0.9;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.input-code-ubuntu
+  code {
+  font-family: Menlo, "Lucida Console", monospace;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div span.tip-title {
+  font-size: 120%;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.link-n-yobi {
+  margin: 0px 2% 0px 0px;
+  text-align: right;
+  font-size: 90%;
+  text-decoration: underline;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.folder-configuration
+  pre {
+  line-height: 1.1;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  div.folder-configuration
+  code {
+  line-height: 1.1;
+}
+
+/* デバイスの横幅が600より大きいの場合 PC限定 */
+@media only screen and (min-width: 601px) {
+  /* PC 全体 （リンク以外）*/
+  *:not(a) {
+    color: #1a1a1a;
+  }
+
+  /* PC h1 タイトル */
+  .book .book-body .page-wrapper .page-inner section.normal h1 {
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    background: #0075c2;
+    color: #ffffff;
+    font-size: 44px;
+    line-height: 1.4;
+    padding: 20px 2px;
+    width: 100%;
+  }
+
+  /* PC h2 まとめ 練習 */
+  .book .book-body .page-wrapper .page-inner section.normal h2 {
+    font-size: 38px;
+    line-height: 1.4;
+    margin-left: 4%;
+    padding-left: 2%;
+  }
+
+  /* PC h3 */
+  .book .book-body .page-wrapper .page-inner section.normal h3 {
+    font-size: 36px;
+    line-height: 1.4;
+    border-left: 6px solid #0075c2;
+    border-bottom: 2px solid #0075c2;
+    color: #0075c2;
+    margin-left: 4%;
+    margin-right: 5%;
+    padding-left: 2%;
+  }
+
+  /* PC h4 */
+  .book .book-body .page-wrapper .page-inner section.normal h4 {
+    font-size: 24px;
+    line-height: 1.4;
+    border-left: 5px solid #4c9ed4;
+    margin-left: 4%;
+    margin-bottom: 4px;
+    margin-top: 50px;
+    padding-left: 2%;
+  }
+
+  /* PC h5 */
+  .book .book-body .page-wrapper .page-inner section.normal h5 {
+    font-size: 20px;
+    line-height: 1.4;
+    border-left: 4px solid #b2d5ed;
+    margin: 0px 4%;
+    margin-bottom: 2px;
+    margin-top: 50px;
+    /* [上下][左右] */
+    padding-left: 2%;
+  }
+
+  /* PC span.aggressive */
+  .book .book-body .page-wrapper .page-inner section.normal span.aggressive {
+    margin-left: 5%;
+    font-weight: bolder;
+    font-size: 200%;
+    background-image: linear-gradient(transparent 50%, #b2d5ed 50%);
+  }
+
+  /* PC a.game-book-button */
+  .book .book-body .page-wrapper .page-inner section.normal a.game-book-button {
+    font-size: 24px;
+    padding: 3px 20px;
+    margin: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    color: #ffffff;
+    background: #0075c2;
+  }
+
+  /* PC a.game-book-button:hover */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.game-book-button:hover {
+    background: #005e9b;
+  }
+
+  /* PC a.return-game-book-button */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.return-game-book-button {
+    font-size: 24px;
+    border-top: 2px solid #009966;
+    border-right: 2px solid #009966;
+    border-bottom: 2px solid #009966;
+    border-left: 2px solid #009966;
+    color: #009966;
+    padding: 3px 20px;
+    margin: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    background: #ffffff;
+  }
+
+  /* PC a.return-game-book-button:hover */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.return-game-book-button:hover {
+    color: #006633;
+    background: #f2f2f2;
+  }
+
+  /* PC code-with-caption */
+  .book .book-body .page-wrapper .page-inner section.normal .code-with-caption {
+    background-color: #ebefff;
+    padding: 0px 4px 4px 4px;
+    /* [上][右][下][左] */
+    margin: 2px 5% 0px 5%;
+    /* [上][右][下][左] */
+    text-align: left;
+  }
+
+  /* PC .image-with-caption */
+  .image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div.image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    p.image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div
+    p.image-with-caption {
+    width: 90%;
+    /* background-color: #ffffff; */
+    padding: 0px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* PC div.tip */
+  .book .book-body .page-wrapper .page-inner section.normal div.tip {
+    background: #e5f1f9;
+    padding: 4px;
+    margin: 22px 4%;
+  }
+
+  /* PC div.tip p */
+  .book .book-body .page-wrapper .page-inner section.normal div.tip p {
+    margin: 0 auto;
+    /* [上下][左右] */
+  }
+
+  /* PC div.notice */
+  div.notice {
+    border: solid 6px #FFD700;
+    border-radius: 20px;
+    padding: 4px;
+    margin: 22px 4%;
+  }
+
+  /* PC div.tip p */
+  div.notice p {
+    margin: 0 auto;
+    /* [上下][左右] */
+  }
+
+  /* PC .image-with-caption-in-tip */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div.tip
+    p.image-with-caption-in-tip {
+    background-color: #f2f2f2;
+    padding: 0px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* PC table */
+  .book .book-body .page-wrapper .page-inner section.normal table {
+    margin: 0px 5%;
+    width: 90%;
+    line-height: 1.4;
+  }
+
+  /* PC ol, ul */
+  .book .book-body .page-wrapper .page-inner section.normal ol,
+  .book .book-body .page-wrapper .page-inner section.normal ul {
+    margin: 0px 6%;
+    padding: 0px;
+  }
+
+  /* PC ol ol, ul ul */
+  .book .book-body .page-wrapper .page-inner section.normal ol ol,
+  .book .book-body .page-wrapper .page-inner section.normal ul ul {
+    margin: 0px 22px;
+    padding: 0px;
+  }
+}
+
+/*デバイスの横幅が600px以下の場合 スマホ*/
+@media only screen and (max-width: 600px) {
+  /* スマホ全体 */
+  .book .book-body .page-wrapper .page-inner section.normal * {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  /* スマホ全体 （リンク以外）*/
+  *:not(a) {
+    color: #1a1a1a;
+  }
+
+  /* スマホ h1 */
+  .book .book-body .page-wrapper .page-inner section.normal h1 {
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    background: #0075c2;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1.4;
+    padding: 20px 2px;
+    width: 100%;
+  }
+
+  /* スマホ h2 */
+  .book .book-body .page-wrapper .page-inner section.normal h2 {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-left: 4%;
+    padding-left: 2%;
+  }
+
+  /* スマホ h3 */
+  .book .book-body .page-wrapper .page-inner section.normal h3 {
+    font-size: 24px;
+    line-height: 1.4;
+    border-left: 6px solid #0075c2;
+    border-bottom: 2px solid #0075c2;
+    color: #0075c2;
+    margin-left: 4%;
+    margin-right: 5%;
+    padding-left: 2%;
+  }
+
+  /* スマホ h4 */
+  .book .book-body .page-wrapper .page-inner section.normal h4 {
+    font-size: 21px;
+    line-height: 1.4;
+    border-left: 5px solid #4c9ed4;
+    margin-left: 4%;
+    margin-bottom: 4px;
+    margin-top: 50px;
+    padding-left: 2%;
+  }
+
+  /* スマホ h5 */
+  .book .book-body .page-wrapper .page-inner section.normal h5 {
+    font-size: 18px;
+    line-height: 1.4;
+    border-left: 4px solid #b2d5ed;
+    margin-left: 4%;
+    margin-bottom: 2px;
+    margin-top: 50px;
+    padding-left: 2%;
+  }
+
+  /* スマホ span.aggressive */
+  .book .book-body .page-wrapper .page-inner section.normal span.aggressive {
+    margin-left: 2%;
+    font-weight: bolder;
+    font-size: 200%;
+    background-image: linear-gradient(transparent 50%, #b2d5ed 50%);
+  }
+
+  /* スマホ a.game-book-button */
+  .book .book-body .page-wrapper .page-inner section.normal a.game-book-button {
+    text-align: center;
+    padding: 3px 20px;
+    margin: 5px;
+    display: block;
+    font-weight: bolder;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    color: #ffffff;
+    background: #0075c2;
+  }
+
+  /* スマホ a.game-book-button:active */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.game-book-button:active {
+    background: #005e9b;
+  }
+
+  /* スマホ a.return-game-book-button */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.return-game-book-button {
+    text-align: center;
+    border-top: 2px solid #009966;
+    border-right: 2px solid #009966;
+    border-bottom: 2px solid #009966;
+    border-left: 2px solid #009966;
+    color: #009966;
+    padding: 3px 20px;
+    margin: 5px;
+    display: block;
+    font-weight: bolder;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    background: #ffffff;
+  }
+
+  /* スマホ a.return-game-book-button:active */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    a.return-game-book-button:active {
+    color: #006633;
+    background: #f2f2f2;
+  }
+
+  /* スマホ code-with-caption */
+  .book .book-body .page-wrapper .page-inner section.normal .code-with-caption {
+    background-color: #ebefff;
+    padding: 0px 4px 4px 4px;
+    /* [上][右][下][左] */
+    margin: 2px 0% 0px 0%;
+    /* [上][右][下][左] */
+    text-align: left;
+  }
+
+  /* スマホ .image-with-caption */
+  .image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div.image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    p.image-with-caption,
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div
+    p.image-with-caption {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* スマホ div.notice */
+  div.notice {
+    border: solid 6px #FFD700;
+    border-radius: 20px;
+    padding: 4px;
+    margin: 22px 0px;
+  }
+
+  /* スマホ div.tip p */
+  div.notice p {
+    margin: 0 auto;
+    /* [上下][左右] */
+  }
+
+  /* スマホ div.tip */
+  .book .book-body .page-wrapper .page-inner section.normal div.tip {
+    background: #e5f1f9;
+    padding: 4px;
+    margin: 22px 2%;
+    /* [上下][左右] */
+  }
+
+  /* スマホ div.tip p */
+  .book .book-body .page-wrapper .page-inner section.normal div.tip p {
+    margin: 0 auto;
+    /* [上下][左右] */
+  }
+
+  /* スマホ .image-with-caption-in-tip */
+  .book
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    div.tip
+    p.image-with-caption-in-tip {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 0px 0px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* スマホ table */
+  .book .book-body .page-wrapper .page-inner section.normal table {
+    margin: 0px;
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  /* スマホ table th */
+  .markdown-section table td,
+  .markdown-section table th {
+    padding: 0px;
+  }
+
+  /* スマホ ol, ul */
+  .book .book-body .page-wrapper .page-inner section.normal ol,
+  .book .book-body .page-wrapper .page-inner section.normal ul {
+    margin: 0px 10%;
+    padding: 0px;
+  }
+
+  /* スマホ ol ol, ul ul */
+  .book .book-body .page-wrapper .page-inner section.normal ol ol,
+  .book .book-body .page-wrapper .page-inner section.normal ul ul {
+    margin: 0px 22px;
+    padding: 0px;
+  }
+}
+
+.image-with-caption img {
+  display: block;
+  padding: 4px;
+  /* [上][右][下][左] */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  a.append-down-arrow:after {
+  content: "\25bc";
+  /* ▼ */
+  /* "\002228" */
+  margin-left: 10px;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  a.append-upper-arrow:after {
+  content: "\25b2";
+  /* ▲ */
+  /* "\002227" */
+  margin-left: 10px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table th {
+  line-height: 1.4;
+  background: #e5f1f9;
+}
+
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  .code-with-caption
+  pre,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  .code-with-caption
+  pre
+  code {
+  margin: 0px;
+  /* [上下左右] */
+  background: #f9f9f9;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal div.tip pre {
+  margin: 0 1%;
+  /* [上下][左右] */
+}
+
+.code-caption {
+  font-style: italic;
+  padding: 0px 5px;
+  font-weight: bold;
+  color: #282a36;
+  font-size: 120%;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal code.big-code {
+  padding: 2px 2px 1px 2px;
+  font-size: 120%;
+  vertical-align: middle;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+  height: 3px;
+  background-color: #4c9ed4;
+  margin: 20px 5% 40px 5%;
+  /* [上][左][下][右] */
+}
+
+.book .book-body .page-wrapper .page-inner section.normal hr.normal {
+  height: 3px;
+  background-color: #4c9ed4;
+  margin: 0px 5%;
+  /* [上下][左右] */
+}
+
+/* ここから必要ない要素の削除 */
+
+/* 左側のSUMMARYを削除 */
+body > div > div.book-summary {
+  display: none;
+}
+
+.book.with-summary .book-body {
+  left: 0px;
+}
+
+/* 左上のメニューを除去 */
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-left.js-toolbar-action {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > div.dropdown.pull-left.font-settings.js-toolbar-action {
+  display: none;
+}
+
+/* ここからヘッダーのSNSリンクの削除 */
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-right.twitter-sharing-link.sharing-link {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-right.facebook-sharing-link.sharing-link {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-right.google-plus-sharing-link.sharing-link {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > div.dropdown.pull-right
+  > a {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-left.toggle-summary {
+  display: none;
+}
+
+body
+  > div
+  > div.book-body
+  > div
+  > div.book-header
+  > a.btn.pull-left.toggle-search {
+  display: none;
+}
+
+.book.without-animation .book-summary {
+  display: none;
+}
+
+/* header のタイトルを削除*/
+.book .book-header h1 {
+  display: none;
+}
+
+/* 横に出てくる矢印の削除 */
+body > div > div.book-body > a.navigation.navigation-prev {
+  display: none;
+}
+
+body > div > div.book-body > a.navigation.navigation-next {
+  display: none;
+}
+
+/* diff を GitHub風のCSSに修 */
+.hljs-addition {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.hljs-deletion {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+/* tab デザイン用 */
+.tab {
+  overflow: hidden;
+  margin: 4%;
+}
+
+.tab > input {
+  display: none;
+}
+
+.tab nav label {
+  display: inline-block;
+  color: #0075c2;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+
+.tab > div {
+  display: flex;
+  width: 200%;
+}
+
+.tab section {
+  width: 100%;
+  padding: 0.5em 0.75em;
+  border: 1px solid #0075c2;
+  border-radius: 0 6px 6px 6px;
+  box-sizing: border-box;
+}
+
+.tab input[id="tab1"]:checked ~ div {
+  transform: translateX(0);
+}
+
+.tab input[id="tab2"]:checked ~ div {
+  transform: translateX(-50%);
+}
+
+.tab input[id="tab1"]:checked ~ nav label[for="tab1"] {
+  color: #fff;
+  background-color: #0075c2;
+}
+
+.tab input[id="tab2"]:checked ~ nav label[for="tab2"] {
+  color: #fff;
+  background-color: #0075c2;
+}
+
+/* tab デザイン用 */
+.tab {
+  overflow: hidden;
+}
+
+.tablinks div {
+  color: #0075c2;
+  background-color: #fff;
+  float: left;
+  margin-right: 0.25em;
+  padding: 0.75em 1em;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.tablinks div.active {
+  color: #fff;
+  background-color: #0075c2;
+}
+
+.tabcontents {
+  display: flex;
+  width: 200%;
+}
+
+.tabcontent {
+  width: 50%;
+  padding: 0.5em 0.75em;
+  border: 2px solid #0075c2;
+  border-radius: 0 6px 6px 6px;
+}
+
+.tabcontents[data-active="win"] {
+  transform: translateX(0);
+}
+
+.tabcontents[data-active="mac"] {
+  transform: translateX(-50%);
+}
+
+/* 練習問題の答え */
+.answer:not([active]),
+.hidden-content:not([active]) {
+  user-select: none;
+  filter: blur(0.5rem);
+}
+
+/* キーボード */
+
+kbd {
+  display: inline-block;
+  padding: 0px 1rem;
+  border-radius: 3px;
+  min-width: 3rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #222;
+  box-shadow: inset 0 -2px #587796;
+  font-family: "Menlo", "Monaco", "Consolas", monospace;
+  color: #fff;
+}
+
+
+/* 英単語用の枠 */
+
+.dictionary{
+  background-color:#fffbf0;
+  margin:22px 5%;
+  padding:1rem;
+  border-left:5px solid #c4a85e;
+}
+
+.dictionary .word {
+  font-style:italic;
+  font-weight:bold;
+}
+
+/* コードブロック */
+
+/* コード中でも改行する */
+/* pre[class*="language-"] > code[class*="language-"] {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+} */
+
+.token.deleted,
+.token.prefix.unchanged,
+.token.prefix.inserted {
+  /* diff 中でコピー対象を指定 */
+  user-select: none;
+}
+.token.deleted-sign.deleted {
+  background-color: rgba(255, 0, 0, 0.1);
+  display: block;
+}
+.token.inserted-sign.inserted {
+  background-color: rgba(0, 255, 128, 0.1);
+  display: block;
+}

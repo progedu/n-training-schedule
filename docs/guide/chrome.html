@@ -1,0 +1,424 @@
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--<base target="_parent">-->
+  <base href="." target="_parent">
+  <title>Google Chromeのインストール</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./chrome_files/font.css">
+  <link rel="stylesheet" href="./chrome_files/default.css">
+  <link rel="stylesheet" href="./chrome_files/normalize.css">
+  <link rel="stylesheet" href="./chrome_files/style.css">
+  <link rel="stylesheet" href="./chrome_files/codeBlockDecorator.css">
+  <script type="text/javascript" async="" src="./chrome_files/f.txt"></script><script async="" src="./chrome_files/uwt.js"></script><script type="text/javascript" async="" src="./chrome_files/analytics.js"></script><script async="" src="./chrome_files/gtm.js"></script><script type="text/javascript" src="./chrome_files/gifffer.min.js"></script>
+  <script type="text/javascript" src="./chrome_files/codeBlockDecorator.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="./chrome_files/MathJax.js"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#0075c2',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    };
+
+  </script>
+  <script defer="" src="./chrome_files/MathJax.js"></script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5NW2C5Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NW2C5Z');</script>
+<!-- End Google Tag Manager -->
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script charset="utf-8" src="./chrome_files/button.63c51c903061d0dbd843c41e8a00aa5a.js"></script><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" src="./chrome_files/f(1).txt"></script><script src="./chrome_files/f(2).txt"></script></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google Chromeのインストール</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1>Google Chromeのインストール</h1>
+        <p>Google Chromeのインストール方法を紹介していきます。</p>
+        <h2><a name="chrome-install"></a> Google Chrome をインストールしよう</h2>
+        <p><a href="https://www.nicovideo.jp/" target="_blank">ニコニコ動画</a> や <a href="https://www.google.co.jp/" target="_blank">Google</a> などのホームページを表示するのに使うのが <strong>ブラウザ</strong> です。</p>
+        <p>様々な種類のブラウザがありますが、本研修では <strong>Google Chrome</strong>（グーグル・クローム） を利用して説明をしていきますので、 Google Chrome のインストール方法を紹介します。もし、既に Google Chrome を利用している方はダウンロード・インストールの手順を読み飛ばし、次に進んでください。</p>
+        <h3><a name="how-to-chrome-install"></a> Chrome のインストールと起動手順</h3>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab(&#39;win&#39;)" data-tablink-name="win">Windows</div>
+            <div class="tablink" onclick="selectTab(&#39;mac&#39;)" data-tablink-name="mac">Mac</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>お使いのブラウザを開きます。<br> URL（アドレス）を入力する欄に半角英数字で <strong>www.google.co.jp</strong> と入力して <kbd>Enter</kbd> を押し、検索エンジンの Google にアクセスしましょう。</p>
+              <h4>Windows 10 の Edge の例</h4>
+              <div class="image-with-caption">
+                <img src="./chrome_files/20f3f74c-private.png">
+                <span class="imagecaption screenshot">Edge でのURL入力欄</span>
+              </div>
+              <h4>Internet Explorer の例</h4>
+              <div class="image-with-caption">
+                <img src="./chrome_files/cbe60adf-private.png">
+                <span class="imagecaption screenshot">Internet Explorer でのURL入力欄</span>
+              </div>
+              <p>Google を開いたら、検索ボックスに <strong>Chrome</strong> と入力して <kbd>Enter</kbd> を押します。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/befd61de-private.png">
+                <span class="imagecaption screenshot">Internet Explorer でのURL入力欄</span>
+              </div>
+              <p>検索結果から Chrome ダウンロードページへのリンクをクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5b7f0993-private.png">
+                <span class="imagecaption screenshot">ダウンロードページへのリンク https://www.google.co.jp/chrome/</span>
+              </div>
+              <p>Chrome のサイトが見つからない方は、<a href="https://www.google.co.jp/chrome/" target="_blank">こちらのリンク</a>から Chrome のダウンロードサイトにアクセスしてください。</p>
+              <div class="tip"><a name="chrome-fake"></a>
+                <span class="tip-title">偽サイトに注意</span>
+                <p>「Chrome」で検索する人を狙った、悪質な偽サイトが確認されています。</p>
+                <p>偽サイトからソフトをダウンロードした場合、データが破損したり、個人情報が抜き取られたりする恐れがあります。</p>
+                <p>上の画像の赤枠で示しているように、本物のサイトの URL には「google.co.jp」あるいは「google.com」の文字列が入っています。</p>
+                <p><span class="tip-title">Chrome に限らず、ソフトウェアを検索してダウンロードする場合、開発元の公式サイトからダウンロードしようとしているかを確認しましょう。</span></p>
+              </div>
+              <p>ダウンロードボタンをクリックしてダウンロードを行います。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/e1bd3cec-private.png">
+                <span class="imagecaption screenshot">ダウンロードボタン</span>
+              </div>
+              <p>利用規約を良く読み、同意ができたらインストールボタンをクリックします。「使用統計データと……」のチェックは必要なければ外して構いません。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/71a8d576-private.png">
+                <span class="imagecaption screenshot">利用規約</span>
+              </div>
+              <p>次のような画面が表示されたら、「保存」をクリックしてください。 特に設定を変更していなければ、「ダウンロード」というフォルダに保存されているはずです。<br> もちろんここから実行しても構いませんが、ここではダウンロードフォルダを開いてみましょう。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/0c1cc213-private.png">
+                <span class="imagecaption screenshot">ダウンロード処理の選択</span>
+              </div>
+              <p>「ダウンロードが完了しました」と表示されたら、「フォルダーを開く」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/1adfb9b8-private.png">
+                <span class="imagecaption screenshot">ダウンロード完了時の表示</span>
+              </div>
+              <p>ダウンロードフォルダを開くと、 <code>ChromeSetup(.exe)</code> というファイルがあるはずです。これをダブルクリックして起動します。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/fe52f7ea-private.png">
+                <span class="imagecaption screenshot">Chrome のインストーラーを起動する</span>
+              </div>
+              <p>セキュリティの警告が表示されたら「実行」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5d364907-private.png">
+                <span class="imagecaption screenshot">Chrome のインストーラーを起動する</span>
+              </div>
+              <p>ユーザーアカウント制御の画面が表示されたら、「はい」あるいは「実行」をクリックし、実行を許可します。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/c7df11f9-private.png">
+                <span class="imagecaption screenshot">Chrome のインストーラーを起動する</span>
+              </div>
+              <p>しばらく待つと次のような画面となり、自動的に Chrome がダウンロード・インストールされます。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/7177ba4e-private.png">
+                <span class="imagecaption screenshot">Chrome をインストール中の画面</span>
+              </div>
+              <p>インストールが終わると、自動的に Chrome が起動します。</p>
+              <p>Chrome を使い始める際に、便利にするための手順が表示されます。「開始する」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/f755aede-private.png">
+                <span class="imagecaption screenshot">起動直後の画面</span>
+              </div>
+              <p>Google が提供するアプリをブックマーク（お気に入り）に登録する手順が表示されますが、特にこだわりがなければ「スキップ」をクリックしてください。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/686a5423-private.png">
+                <span class="imagecaption screenshot">ブックマークのカスタマイズ画面</span>
+              </div>
+              <p>Chrome の背景デザインを選ぶ画面が表示されます。好きなものに変更できます。<br>特にこだわりがなければ「スキップ」をクリックしても構いません。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/f63a75d3-private.png">
+                <span class="imagecaption screenshot">デザインのカスタマイズ画面</span>
+              </div>
+              <p>Chrome をデフォルトのブラウザ（Windows が標準で使うブラウザ）にするか尋ねる画面が表示されます。 Web プログラミングにおいては Chrome をデフォルトのブラウザに設定しておく方が便利なので、設定しておきましょう。「デフォルトとして設定」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5d94a5e7-private.png">
+                <span class="imagecaption screenshot">既定のブラウザにするか尋ねる画面</span>
+              </div>
+              <p>すると、デフォルトのアプリを変更する Windows の設定画面が表示されます。<br> 下の方に「Web ブラウザ」という欄があるので、ここに表示されている現在のブラウザ（Microsoft Edge や Internet Explorer）の名前をクリックし、表示されたアプリ一覧から Google Chrome をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/3625752c-private.png">
+                <span class="imagecaption screenshot">既定のアプリを設定する画面</span>
+              </div>
+              <p>変更してよいか聞かれるので、「強制的に変更する」をクリックします。<br> 無事に設定ができたら、「デフォルトのアプリ」画面は閉じてください。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/197d38c3-private.png">
+                <span class="imagecaption screenshot">「強制的に変更する」をクリック</span>
+              </div>
+              <p>Chrome に戻ると、Google アカウントで Chrome にログインするかどうかを聞かれる画面が表示されます。特に必要性はないので、「いいえ」ボタンをクリックします。<br> もし Google のアカウント（ID）をお持ちであれば、ログインしても問題ありません。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/c3e1e4c6-private.png">
+                <span class="imagecaption screenshot">Chrome にログインするか尋ねる画面</span>
+              </div>
+              <p>今後は、デスクトップに追加された「Google Chrome」のアイコンをダブルクリックすることで、Chrome を起動させることができます。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/ab4987aa-private.png">
+                <span class="imagecaption screenshot">デスクトップから Chrome を起動できる</span>
+              </div>
+              <p>以上で、Google Chrome のインストールは完了です。</p>
+              <p>なお、インストールが正常に完了すれば、ダウンロードフォルダ内の <code>ChromeSetup(.exe)</code> は削除しても構いません。</p>
+            </div>
+            <div class="tabcontent">
+              <p>お使いのブラウザを開きます。ここでは、 Safari を例にして説明していきます。<br> ブラウザには<strong>検索欄</strong>がありますので、 <code>Chrome</code> と入力して <kbd>Enter</kbd> を押します。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/bb963ee6-private.png">
+                <span class="imagecaption screenshot">Chrome と入力し、 Enter キーを押す</span>
+              </div>
+              <p>Google の公式サイトから Chrome をダウンロードします。 <code>https</code> から始まる URL に <code>google.co.jp</code> と含まれているものが公式サイトです。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/fc96360d-private.png">
+                <span class="imagecaption screenshot">Chrome のダウンロードサイトにアクセスする</span>
+              </div>
+              <div class="tip"><a name="chrome-fake"></a>
+                <span class="tip-title">偽サイトに注意</span>
+                <p>「Chrome」で検索する人を狙った、悪質な偽サイトが確認されています。</p>
+                <p>偽サイトからソフトをダウンロードした場合、データが破損したり、個人情報が抜き取られたりする恐れがあります。</p>
+                <p>上の画像の赤枠で示しているように、本物のサイトの URL には「google.co.jp」あるいは「google.com」の文字列が入っています。</p>
+                <p><span class="tip-title">Chrome に限らず、ソフトウェアを検索してダウンロードする場合、開発元の公式サイトからダウンロードしようとしているかを確認しましょう。</span></p>
+              </div>
+              <p>画面中央に表示されている「Chrome をダウンロード」というボタンをクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5782c75d-private.png">
+                <span class="imagecaption screenshot">ダウンロードボタンをクリック</span>
+              </div>
+              <p>利用規約に同意したら、「同意してインストール」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/fed2d9ac-private.png">
+                <span class="imagecaption screenshot">利用規約に同意したら「同意してインストール」をクリック</span>
+              </div>
+              <p>ダウンロードが完了したら、 Finder (ファインダー) を開きます。特に設定を変更していない macOS であれば、画面下部に位置する Dock の左端にあるはずです。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/7b43f0aa-private.png">
+                <span class="imagecaption screenshot">Finder を開く</span>
+              </div>
+              <p>ダウンロードフォルダを開き、先ほどダウンロードした <code>googlechrome.dmg</code> をダブルクリックで起動します。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/7994760b-private.png">
+                <span class="imagecaption screenshot">googlechrome.dmg を開く</span>
+              </div>
+              <p>少し待つと、このような画面が表示されるので、<code>Google Chrome.app</code> と書いてあるアイコンを、下のフォルダのアイコンまでドラッグ&amp;ドロップします。この操作によって、Google Chrome がお使いの Mac にコピーされます。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/1e1acc0c-private.png">
+                <span class="imagecaption screenshot">アイコンをドラッグ・アンド・ドロップ</span>
+              </div>
+              <p>コピーが完了したら、先ほどのアイコンが 2 つ並んだ画面を閉じてください。その後、Finder のデバイス欄に表示されている Google Chrome の横にある取り出しボタンをクリックしてください。なお、正常にインストールできていれば、先ほどダウンロードした <code>googlechrome.dmg</code> は削除しても構いません。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/81c21125-private.png">
+                <span class="imagecaption screenshot">取り出しボタンをクリック</span>
+              </div>
+              <p>続いて、アプリケーションフォルダを開いて <code>Google Chrome.app</code> をダブルクリックしてください。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/8f799f09-private.png">
+                <span class="imagecaption screenshot">Google Chromeを起動</span>
+              </div>
+              <p>Google Chrome はインターネット上からダウンロードしたプログラムなので、 Mac がセキュリティ的に開いても問題ないかを聞いてきます。今回は Google の公式サイトからダウンロードしており、安全だと判断できるので「開く」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5bca9c94-private.png">
+                <span class="imagecaption screenshot">「開く」をクリック</span>
+              </div>
+              <p>「Google Chrome へようこそ」というダイアログが表示されたら、「Google Chrome を規定のブラウザとして設定する」をクリックしてチェックを入れます。<br> 「使用統計データや……」という項目のチェックはよく分からなければ外して大丈夫です。<br> 適切にチェックを入れ終えたら、「Google Chrome を起動」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/2d72d59d-private.png">
+                <span class="imagecaption screenshot">「Google Chromeへようこそ」ダイアログ</span>
+              </div>
+              <p>「"Chrome"に変更」と書いてあるボタンをクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/bb02baa7-private.png">
+                <span class="imagecaption screenshot">「"Chrome"に変更」をクリック</span>
+              </div>
+              <p>Chrome を使い始める際に、便利にするための手順が表示されます。「開始する」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/51e7efc6-private.png">
+                <span class="imagecaption screenshot">起動直後の画面</span>
+              </div>
+              <p>Google が提供するアプリをブックマーク（お気に入り）に登録する手順が表示されますが、特にこだわりがなければ「スキップ」をクリックしてください。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/db21ece7-private.png">
+                <span class="imagecaption screenshot">ブックマークのカスタマイズ画面</span>
+              </div>
+              <p>Google アカウントで Chrome にログインするかどうかを聞かれる画面が表示されます。特に必要性はないので、「スキップ」ボタンをクリックします。<br> もし Google のアカウント（ID）をお持ちであれば、ログインしても問題ありません。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/5d1a41aa-private.png">
+                <span class="imagecaption screenshot">Chrome にログインするか尋ねる画面</span>
+              </div>
+              <p>無事、 Google Chrome が起動すればインストール完了です。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/4ff5ddc6-private.png">
+                <span class="imagecaption screenshot">インストール完了</span>
+              </div>
+              <p>また、これから頻繁に Google Chrome を使っていくことになるので、 Dock に追加しておきましょう。 Dock 上で Chrome のアイコンを右クリック（MacBook, MacBook Air, MacBook Pro をお使いの場合、初期設定であれば 2 本指でクリック）し、「オプション」から「Dock に追加」をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="./chrome_files/05fb6b50-private.png">
+                <span class="imagecaption screenshot">Dock に追加する</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="ending-h2">お疲れさまでした！</h2>
+        <p>以上でGoogle Chromeのインストールは完了です</p>
+      </section>
+    </div>
+  </div>
+<script src="./chrome_files/guideContentMathJaxChannel-1dae68c8361e87b2f08f.js"></script>
+
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./chrome_files/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html" title="Twitter settings iframe" style="display: none;"></iframe>
+<script type="text/javascript" id="" src="./chrome_files/js"></script><script type="text/javascript" id="" src="./chrome_files/ytag.js"></script>
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o2upm");twq("track","PageView");</script>
+
+<script type="text/javascript" id="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","AW-661450372");</script>
+<script type="text/javascript" id="">window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"ycl_cookie"});ytag({type:"ycl_cookie_extended"});</script><script type="text/javascript" id="" src="./chrome_files/ytag.js"></script>
+<script type="text/javascript" id="">window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yss_retargeting",config:{yahoo_ss_retargeting_id:"1001119071",yahoo_sstag_custom_params:{}}});</script><script src="./chrome_files/adsct" type="text/javascript"></script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./chrome_files/saved_resource.html"></iframe></body></html>
