@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>プログラミング研修 時間割</title>
+  <script src="../assets/js/util.js"></script>
+  <style>
+    .cd-schedule__event [data-event="event-5"] {
+      background: #f4aeb9;
+    }
+    .cd-schedule__event [data-event="event-b"] {
+      background: rgba(14, 21, 73, 0.38);
+    }
+    .cd-schedule__event [data-event="event-6"] {
+      background: #9a6f78;
+    }
+    .cd-schedule__event [data-event="event-7"] {
+      background: #5a9a5e;
+    }
+    .cd-schedule__event [data-event="event-8"] {
+      background: #63879a;
+    }
+    .cd-schedule__event [data-event="event-9"] {
+      background: #9a5a67;
+    }
+    header {
+      margin-top: 50px;
+    }
+    body {
+      background-image: linear-gradient(
+        -45deg,
+        #e9ecf5 25%,
+        #e1e6f4 25%,
+        #e1e6f4 50%,
+        #e9ecf5 50%,
+        #e9ecf5 75%,
+        #e1e6f4 75%,
+        #e1e6f4
+      );
+      background-size: 40px 40px;
+      background-attachment: fixed;
+    }
+    .cd-schedule__top-info {
+      background: #FFFFFF;
+    }
+    .cd-schedule__top-info{
+      background: repeating-linear-gradient(to right, #fef9fe, #fef9fe 3px, white 3px, white 6px);
+    }
+  </style>
+</head>
+<body>
+  <header class="cd-main-header text-center flex flex-column flex-center">
+    <h1 class="text-xl">プログラミング研修 時間割</h1>
+  </header>
+
+  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+    <div class="cd-schedule__timeline">
+      <ul class="time_schedule_list">
+        <li><span>00:00</span></li>
+        <li><span>00:10</span></li>
+        <li><span>00:20</span></li>
+        <li><span>00:30</span></li>
+        <li><span>00:40</span></li>
+        <li><span>00:50</span></li>
+        <li><span>01:00</span></li>
+        <li><span>01:10</span></li>
+        <li><span>01:20</span></li>
+        <li><span>01:30</span></li>
+        <li><span>01:40</span></li>
+        <li><span>01:50</span></li>
+        <li><span>02:00</span></li>
+        <li><span>02:10</span></li>
+        <li><span>02:20</span></li>
+        <li><span>02:30</span></li>
+        <li><span>02:40</span></li>
+        <li><span>02:50</span></li>
+        <li><span>03:00</span></li>
+        <li><span>03:10</span></li>
+        <li><span>03:20</span></li>
+        <li><span>03:30</span></li>
+        <li><span>03:40</span></li>
+        <li><span>03:50</span></li>
+        <li><span>04:00</span></li>
+        <li><span>04:10</span></li>
+        <li><span>04:20</span></li>
+        <li><span>04:30</span></li>
+        <li><span>04:40</span></li>
+        <li><span>04:50</span></li>
+        <li><span>05:00</span></li>
+        <li><span>05:10</span></li>
+        <li><span>05:20</span></li>
+        <li><span>05:30</span></li>
+        <li><span>05:40</span></li>
+        <li><span>05:50</span></li>
+        <li><span>06:00</span></li>
+        <li><span>06:10</span></li>
+        <li><span>06:20</span></li>
+        <li><span>06:30</span></li>
+        <li><span>06:40</span></li>
+        <li><span>06:50</span></li>
+        <li><span>07:00</span></li>
+      </ul>
+    </div> <!-- .cd-schedule__timeline -->
+  
+    <div class="cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>DAY 1</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="00:00" data-end="00:20" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">オリエンテーション</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="00:20" data-end="00:40" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">プログラミングとは</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="00:40" data-end="01:10" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">プログラミングを体験してみよう</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="01:10" data-end="01:50" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">はじめてのHTML</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="01:50" data-end="02:00" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="02:00" data-end="03:00" data-event="event-5" href="#0">
+                <em class="cd-schedule__name">さまざまな HTML タグ</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event break">
+              <a class="time_schedule" data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">お昼休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="04:00" data-end="04:40" data-event="event-8" href="#0">
+                <em class="cd-schedule__name">HTML で作る自己紹介ページ</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="04:40" data-end="05:20" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">はじめての CSS</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="05:20" data-end="05:30" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="05:30" data-end="06:10" data-event="event-5" href="#0">
+                <em class="cd-schedule__name">はじめての JavaScript</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="06:10" data-end="07:00" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">JavaScriptでの計算</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>DAY 2</span></div>
+          <ul>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="00:00" data-end="01:00" data-event="event-6" href="#0">
+                <em class="cd-schedule__name">JavaScript で論理を扱う</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="01:00" data-end="01:10" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="01:10" data-end="01:50" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">JavaScript のループ</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="01:50" data-end="02:00" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="02:00" data-end="03:00" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">JavaScript のコレクション</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="03:00" data-end="04:00" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="04:00" data-end="05:10" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">JavaScript の関数</em>
+                <em class="cd-schedule__description">
+                  ・あなたが生まれてからの秒数を表示してみよう
+                </em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule break" data-start="05:10" data-end="05:20" data-event="event-b" href="#0">
+                <em class="cd-schedule__name">休憩</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a class="time_schedule" data-start="00:30" data-end="03:00" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">JavaScript のオブジェクト</em>
+                <em class="cd-schedule__description">
+                  ・時間当てゲームの作成
+                </em>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="cd-schedule-modal">
+      <header class="cd-schedule-modal__header">
+        <div class="cd-schedule-modal__content">
+          <span class="cd-schedule-modal__date"></span>
+          <h3 class="cd-schedule-modal__name"></h3>
+        </div>
+  
+        <div class="cd-schedule-modal__header-bg"></div>
+      </header>
+  
+      <div class="cd-schedule-modal__body">
+        <div class="cd-schedule-modal__event-info"></div>
+        <div class="cd-schedule-modal__body-bg"></div>
+      </div>
+  
+      <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+    </div>
+  
+    <div class="cd-schedule__cover-layer"></div>
+  </div>
+
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/schedule.js"></script>
+</body>
+</html>
+
+<!--
+
+// License: https://codyhouse.co/mit
+
+//-->
